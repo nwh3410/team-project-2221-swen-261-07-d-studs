@@ -1,0 +1,42 @@
+<style>
+  h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: 300;
+  }
+
+  label{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: 300;
+  }
+  div{
+    text-align: center;
+  }
+</style>
+<div *ngIf="part">
+
+    <h2>{{part.name}}</h2>
+    
+    <img src={{part.image}} width="300" height="200">
+    <div>
+      <label for="part-id">Part id: </label>
+      <label for="part-name"> {{part.id}}</label>&nbsp;&nbsp;
+      <label for="part-price">Part price: </label>
+      <label id="part-name">{{part.price}} </label>&nbsp;&nbsp;
+      <label for="part-quantity">Part quantity: </label>
+      <label id="part-name">{{part.quantity}} </label>
+    </div>
+  </div>
+
+  <button type="button" (click)="goBack()">go back</button>
+
+  <div *ngIf="isAdmin; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock></ng-template><br>
+<ng-template #elseBlock>
+  <div *ngIf="part">
+    <button type="button" class="buy" (click)="addToCart(part)">Buy</button>
+  </div>
+</ng-template><br>

@@ -1,0 +1,29 @@
+<html>
+<style>
+  h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: 300;
+  }
+
+  li{
+    size: 50px;
+  }
+  div{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+  }
+  
+</style>
+
+<h2>Current Products</h2>
+<div class="hlist" *ngFor="let part of parts">
+  <img class="part_images" src={{part.image}} width="300" height="200"><br>
+  <a routerLink="/detail/{{part.id}}">
+  <li class="badge">{{part.name}}</li>
+</a>
+</div>
+</html>

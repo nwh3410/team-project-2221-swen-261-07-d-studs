@@ -1,0 +1,101 @@
+.heroes {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.parts li {
+  position: relative;
+  cursor: pointer;
+}
+
+.parts li:hover {
+  left: .1em;
+}
+
+.parts a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  letter-spacing: normal;
+}
+
+.parts a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.parts a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.parts .badge {
+  display: table;
+  font-size: medium;
+  color: black;
+  /* padding: 0.7em 0.7em 0 0.7em; */
+  background-color: red;
+  line-height: 1em;
+  position: center;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  margin-right: 0 auto;
+  border-radius: 4px 0 0 4px;
+}
+
+.hlist {
+  font-size: medium;
+  display: inline-block;
+  list-style: none;
+  /* padding-top: 20px; */
+  padding: 50px;
+}
+
+div#help li {
+  display: inline;
+}
+
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+button.delete {
+  position: absolute;
+  left: 210px;
+  top: 5px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.delete:hover {
+  background-color: grey;
+  color: white;
+}

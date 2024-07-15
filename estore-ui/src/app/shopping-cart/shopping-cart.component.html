@@ -1,0 +1,40 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="shopping-cart.component.css" media=”screen” />
+</head>
+<h3>Your Items</h3>
+
+<table>
+  <tr>
+<div class="cart-item" *ngFor="let item of items; index as i">   
+  <th><img src={{item.image}} width="300" height="200"><br>
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span><br>
+  <span>{{item.quantity}}</span>
+  <button class="buy" (click)="addAnother(item)"
+    >
+    +
+  </button>
+  <button class="remove" (click)="deleteAnother(item)"
+    >
+    -
+  </button>
+  <button class="remove" (click)="onDeleteTask(i)"
+    >
+    Delete All
+  </button>
+</th>
+</div>
+</tr>
+<tr>
+  <button *ngIf="items" type="button" (click)="clearCart()">Clear Cart</button>
+</tr>
+<button class="buy" (click)="endShopping()"
+>
+CHECKOUT
+</button>
+<h4>Your total is: ${{getTotal()}}</h4>
+<h5>Tax: ${{getTax()}}</h5>
+<h6>Your total with tax is: ${{getTotalTax()}}</h6></table>
+
+</html>

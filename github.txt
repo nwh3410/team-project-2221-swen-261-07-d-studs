@@ -1,0 +1,41 @@
+commit ed56b6585d1066719ac2883e5c562538a0be1807
+Author: ZCC9793 <98484401+ZCC9793@users.noreply.github.com>
+Date:   Tue Sep 20 13:09:22 2022 -0400
+
+    Update README.md
+
+commit 33e3f8d90b29e4d99bb474ddb3abe84ef331516a
+Author: ksb5658 <98475686+ksb5658@users.noreply.github.com>
+Date:   Tue Sep 20 10:30:16 2022 -0400
+
+    Update README.md
+
+commit 9c13a25c739ee006a19ca94cc5446a6b1f9980ae
+Author: ipa4767 <98432731+ipa4767@users.noreply.github.com>
+Date:   Mon Sep 19 23:52:46 2022 -0400
+
+    Update README.md
+
+commit 9568020278d6cb0f140316ac6ff824bf64d8c324
+Author: KeyMon JenkinsKeyMon <kaj8751@rit.edu>
+Date:   Mon Sep 19 23:14:05 2022 -0400
+
+    Few updates to get the first steps started
+
+commit 8d8b601545829cf25829aba66a2c457e767e0841
+Author: kaj8751 <98424444+kaj8751@users.noreply.github.com>
+Date:   Mon Sep 19 20:41:51 2022 -0400
+
+    Update README.md
+
+commit 11f5700fa744a1e7ecca19ee42dc732479b38fc5
+Author: Nate Hall <nwh3410@rit.edu>
+Date:   Mon Sep 19 19:26:08 2022 -0400
+
+    README.md Name Update Nate Hall
+
+commit f9fea8bf7017eb3919a6498133ad3c3fee780624
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Wed Sep 14 22:24:05 2022 +0000
+
+    Initial commit

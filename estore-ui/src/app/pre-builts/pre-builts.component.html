@@ -1,0 +1,39 @@
+<html>
+<style>
+  h2{
+    
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-weight: 300;
+  }
+
+  li{
+    size: 100px;
+  }
+  
+  
+
+</style>
+
+<h2>Studly Prebuilts</h2>
+<div class="flex-container">
+
+    <div class="flex-child magenta">
+        <div class="hlist" *ngFor="let part of parts; let i = index">
+            <a routerLink="/detail/{{part.id}}">
+            <li class="badge"*ngIf="i<7" >{{part.name}}</li>
+          </a>
+          </div>
+    </div>
+    
+    <div class="flex-child green">
+        <div class="hlist" *ngFor="let part of parts; let i = index">
+            <a routerLink="/detail/{{part.id}}">
+            <li class="badge"*ngIf="i>6" >{{part.name}}</li>
+          </a>
+          </div>
+    </div>
+    
+  </div>
+</html>
+

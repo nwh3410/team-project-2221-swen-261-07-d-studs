@@ -1,0 +1,32 @@
+<style>
+
+label{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+div{
+  place-items: center;
+  display: grid;
+}
+input{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: grey;
+        width: auto;
+        height: auto;
+      }
+
+</style>
+
+<div id="search-component">
+    <label for="search-box">Part Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+  
+    <ul class="search-result">
+      <li *ngFor="let part of parts$ | async" >
+        <a routerLink="/detail/{{part.id}}">
+          {{part.name}}
+        </a>
+      </li>
+    </ul>
+  </div>

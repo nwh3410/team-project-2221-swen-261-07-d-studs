@@ -1,0 +1,30 @@
+<html>
+  <style>
+  h1{
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  nav{
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px;
+  }
+
+</style>
+
+<h1>{{title}}</h1>
+
+<nav>
+    <a routerLink="/login">Login</a><br>
+    <div *ngIf="isAdmin; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock><a routerLink="/inventory">Inventory</a></ng-template><br>
+<ng-template #elseBlock><a routerLink="/cart">Cart</a><br>
+  <a routerLink="/parts">Parts</a><br>
+  <a routerLink="/search">Part Search</a><br>
+  <a routerLink="/prebuilts">Prebuilts</a><br>
+</ng-template><br>
+  </nav>
+<router-outlet></router-outlet>
+</html>

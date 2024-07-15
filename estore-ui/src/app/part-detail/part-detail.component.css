@@ -1,0 +1,13 @@
+button{
+    width: auto;
+    height: auto;
+    background-color: grey;
+  }
+  button:hover{
+    background-color: red;
+    color: black;
+  }
+  .buy:hover{
+    background-color: green;
+    color: black;
+  }

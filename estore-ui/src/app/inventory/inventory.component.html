@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Inventory Management</title>
+    <style>
+      #grad{
+        height:auto;
+      }
+      h2{
+        text-align: center;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      h3{
+        text-align: center;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      label{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: medium;
+      }
+      input{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: grey;
+        width: auto;
+        height: auto;
+      }
+      button{
+        font-size: small;
+        font-family: 'Courier New', Courier, monospace;
+        width: auto;
+      }
+      div{
+        align-self: center;
+        align-items: center;
+        width: auto;
+        height:auto
+      }
+    </style>
+  </head>
+    <h2>Inventory Management</h2>
+    <h3>Select a Part to Update or Add/Delete a Part:</h3>
+    <div align="center" id="grad">
+        <label for="new-part">Part name: </label>
+        <input id="new-part" #partName /><br>
+        <label for="new-part">Part price: </label>
+        <input id="new-part" #partPrice /><br>
+        <label for="new-part">Part quantity: </label>
+        <input id="new-part" #partQuantity /><br>
+        <label for="new-part">Part image: </label>
+        <input id="new-part" #partImage /><br>
+      
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button type="button" class="add-button" (click)="add(partName.value, partQuantity.value, partPrice.value, partImage.value); partName.value=''">
+          Add part
+        </button>
+    
+      <ul class="parts">
+        <li *ngFor="let part of parts">
+          <a routerLink="/detail/{{part.id}}">
+            <span class="badge">{{part.id}}</span> {{part.name}}
+          </a>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="delete" title="delete part"
+            (click)="delete(part)">remove</button>
+            <div class="hlist">
+                <label for="part-update">Update name: </label>&nbsp;&nbsp;
+                <input id="part-update" [(ngModel)]="part.name" placeholder="name" #partName /><br>&nbsp;&nbsp;
+                <label for="part-update">Update price: </label>&nbsp;&nbsp;
+                <input id="part-update" [(ngModel)]="part.price" placeholder="price" #partPrice /><br>&nbsp;&nbsp;
+                <label for="part-update">Update quantity: </label>&nbsp;&nbsp;
+                <input id="part-update" [(ngModel)]="part.quantity" placeholder="quantity" #partQuantity /><br>&nbsp;&nbsp;&nbsp;
+                <label for="part-update">Update image: </label>&nbsp;&nbsp;
+                <input id="part-update" [(ngModel)]="part.image" placeholder="image" #partImage /><br>&nbsp;&nbsp;&nbsp;
+
+                <button type="button" (click)="update(part.id, partName.value, partQuantity.value, partPrice.value, partImage.value); partName.value=''">
+                  Update part
+                </button>
+              </div>
+        </li>
+      </ul>
+    </div>
+  </html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="login.component.html" media=”screen” />
+</head>
+<body>
+<form #userlogin = "ngForm" (ngSubmit)="onClickSubmit(userlogin.value)" action="#" th:action="@{/login}" th:object="${login}" method="post">
+  <div class="imgcontainer">
+  </div>
+
+  <div class="container">
+    <label style="color:rgb(239, 238, 238);" for="uname"><b>Username</b></label>
+    <input #usernameBox type="text" placeholder="Enter Username" name="uname" required ngModel (input)="setUsername(usernameBox.value)">
+
+    <label style="color:rgb(239, 238, 238);" for="psw"><b>Password</b></label>
+    <input #passwordBox type="password" placeholder="Enter Password" name="psw" required ngModel (input)="setPassword(passwordBox.value)">
+
+    <button type="submit" value="submit" name="submit">Login</button>
+    <label>
+
+    </label>
+  </div>
+</form>
+</body>
+</html>
